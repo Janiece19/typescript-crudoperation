@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div.container {
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+        header {
+            padding: 1em;
+            color: white;
+            background-color: black;
+            clear: left;
+            text-align: center;
+        }
+
+        nav {
+            float: right;
+            max-width: 350px;
+            margin: 0;
+            padding: 1em;
+        }
+
+        nav ul {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+        }
+
+        .add-form {
+            margin: 100px;
+            margin-top: 10px;
+            padding: 1em;
+        }
+
+        input {
+            margin: 5px;
+        }
+        .m-bottom-20{
+            margin-bottom:20px;
+        }
+        
+        article {
+            margin-top: 80px;
+            margin-right: 200px;
+            /* border-right: 1px solid gray; */
+            padding: 1em;
+            overflow: hidden;
+        }
+
+        table {
+            width: 20%
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Employee Details Form</h1>
+        </header>
+        <div>
+            <label for="fname">Name</label>
+            <input type="text" id="myInput" name="myInput" placeholder="Your name..">
+
+            <label for="lname">Department </label>
+            <span id="deptselect"></span>
+
+            <label for="status">Employee Status</label>
+            <span id="statusselect"></span>
+
+            <label for="salary">Salary</label>
+            <span id="salselect"></span>
+
+            <label for="joiningDate">Joining Date</label>
+            <input type="date" id="joinDate">
+
+            <input type="button" value="Search" id="filterbtn">
+            <input type="button" id="btnAdd" value="Add">
+            <p id="Error"></p>
+        </div>
+
+        <nav>
+            <div id="addForm" class="add-form">
+                <h3>Add/Edit form</h3>
+                <div class="m-bottom-20">
+                    <label for="fname">Name</label>
+                    <input type="text" id="myInputsecond" name="userInput" placeholder="Your name..">
+                </div>
+                <div class="m-bottom-20">
+                <label for="lname">Department </label>
+                <span  id="deptselects"></span>
+                </div>
+                
+
+
+                <div class="m-bottom-20">
+                <label for="status">Employee Status</label>
+                <span id="statusselects"></span>
+
+                </div>
+                <div  class="m-bottom-20">
+                <label for="salary">Salary</label>
+                <span id="salselects"></span>
+                </div>
+                <div  class="m-bottom-20">
+                <label for="joiningDate">Joining Date</label>
+                <input type="date" id="userjoinDate">
+                </div>
+                <br><br>
+                <input type="button" value="Save" id="btnSave">
+                <!-- <button onclick="delInput()">Delete</button>
+                    <input type="button" value="clear" onclick="clear1()"> -->
+
+                <input type="button" value="Cancel" id="btnCancel">
+                <input type="button" id="btnUpdate" value="Update">
+                <!-- <input type="button" value="Cancel" onclick="showAddForm(false)" /> -->
+            </div>
+
+        </nav>
+
+        <article>
+            <div id="showData"></div>
+           
+            <input type="reset" value="clear" id="reset">
+
+
+
+
+        </article>
+        <!-- <article>
+            <h1>London</h1>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan
+                area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to
+                its founding by the Romans, who named it Londinium.</p>
+        </article> -->
+
+
+    </div>
+    <script src="../node_modules/moment/min/moment.min.js"></script>
+    <script src="../node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="../node_modules/moment-timezone/builds/moment-timezone.min.js"></script>
+    <script src="../node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
